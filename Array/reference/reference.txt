@@ -1,0 +1,14 @@
+Youtube link :- 
+https://www.youtube.com/watch?v=vgSKOMsjLbc&list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi&index=2
+
+syllabus : 
+https://www.javatpoint.com/data-structure-tutorial
+// link for simple study.
+
+https://www.geeksforgeeks.org/array-data-structure/
+// for question for every topic.
+
+DS problem statement: 
+https://www.codingninjas.com/codestudio/problems?filter_tag_list=%7B%22PracticeCategory%22:%5B%22Data%20Structures%22%5D%7D&page=1#progressWrapper
+
+

@@ -1,0 +1,19 @@
+Syllabus for array:
+ - Declare 1D/2D array.
+ - access data in 2D array.
+ - initialing 2D arrays.
+ - rotaions
+ - Order Statistics 
+ - Range Queries.
+ - Searching and sorting.
+ - Matrix.
+ - mapping 2D array to 1D array.
+ 	- Row major ordering.
+ 	- Column major ordering.
+ - Calculating the address of the random element of the 2D array.
+ 	- By Row Major Order.
+  	- By Column Major Order.
+  	
+ 	
+ 
+ 
