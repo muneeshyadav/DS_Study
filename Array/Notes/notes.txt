@@ -1,2 +1,16 @@
 Array 
   
+what is a array?
+array is a homogeneous type of 
+
+ch - 1 bytes.
+int - 4 bytes.
+float - 4 bytes.
+long - 4 bytes.
+double - 8 bytes.
+
+why same typee of data type ?
+it is coz if the not the same data types then the location of next index will be random access memory.
+
+what is the conept of the garbage value in output in array?
+
