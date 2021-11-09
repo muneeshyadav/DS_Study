@@ -20,6 +20,8 @@ Originally Answered: Why does the array declared inside the main function contai
 Good question. When you say variables declared insude the main() function, these are local variables. They are destroyed when the function finishes it execution. All local variables are stored in the stack. I hope you know what a stack is. Before a function begins execution, details like function arguments, return address, local variables, etc is pushed onto the stack. When the function finishes execution, its popped off the stack.
 
 Let's consider 3 functions f1, f2 and f3. First f1 gets called, and is pushed onto the stack. Now f1 calls f2, and f2 is pushed onto the stack. The stack now contains f2 and f1. After f2 finishes its execution, its popped off the stack. Now f1 calls f3, and f3 is pushed onto the stack. The stack now contains f3 and f1. But f3 is stored in the exact location of where f2 was stored earlier. Since the memory is not cleared before pushing f3, we get what we call "garbage value", which is actually the data used for f2.
+// memory location = 124124 - > f2 - 56.  
+// memory lcoation = 31233 -> f3  - 124124.  ram 
 
 The varibales that are declared outside with global scope and not initialized are stored in BSS segment (.bss
 
@@ -31,3 +33,9 @@ Thus its mentioned in the C standard. All static and global variables must be in
 
 the smallest element of array's index is called its lower bound.
 
+// The elements of an array are stored successively in memory cells because by this way computer can keep track only the address of the first element and the addresses of other elements can be calculated 
+in other words when ever a array is created, initial index of the arrays contaions the memory location of the next index so that computer can track the index of the arrays.
+
+arr[10]
+arr  0 1 2 3 4 5 6 7 8 9.   arr[0 ] = 0 location ,plus data (1) , next inde location  arr[11]= 10 location = 677321 - > 
+     1 2 3 4 5 6 7 8 9 10. 
