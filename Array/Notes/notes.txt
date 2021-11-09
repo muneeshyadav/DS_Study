@@ -14,3 +14,20 @@ it is coz if the not the same data types then the location of next index will be
 
 what is the conept of the garbage value in output in array?
 
+C (programming language): Why does the array declared inside the main function contain garbage values by default, but the array declared globally are initialized to 0 value by default?
+Originally Answered: Why does the array declared inside the main function contain garbage values by default, but the array declared globally are initialized to 0 value by default?
+//
+Good question. When you say variables declared insude the main() function, these are local variables. They are destroyed when the function finishes it execution. All local variables are stored in the stack. I hope you know what a stack is. Before a function begins execution, details like function arguments, return address, local variables, etc is pushed onto the stack. When the function finishes execution, its popped off the stack.
+
+Let's consider 3 functions f1, f2 and f3. First f1 gets called, and is pushed onto the stack. Now f1 calls f2, and f2 is pushed onto the stack. The stack now contains f2 and f1. After f2 finishes its execution, its popped off the stack. Now f1 calls f3, and f3 is pushed onto the stack. The stack now contains f3 and f1. But f3 is stored in the exact location of where f2 was stored earlier. Since the memory is not cleared before pushing f3, we get what we call "garbage value", which is actually the data used for f2.
+
+The varibales that are declared outside with global scope and not initialized are stored in BSS segment (.bss
+
+). The variables stored in BSS are reset to 0. This is actually an optimization done by the compiler to save memory. These variables can simply be mapped to the zero page, and hence do not need to be stored in the binary. These variables shall be allocated space at run time by the loader, just before the variables are used.
+
+Thus its mentioned in the C standard. All static and global variables must be initialized before the program starts. If the programmer didn't do this explicitly, then the compiler must set them to zero. If the compiler doesn't do this, it doesn't follow standard C.
+
+
+
+the smallest element of array's index is called its lower bound.
+
